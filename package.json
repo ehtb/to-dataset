@@ -1,7 +1,7 @@
 {
   "name": "to-dataset",
   "version": "0.1.0",
-  "description": "object to DOM dataset",
+  "description": "JS object to DOM dataset",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js -o dist/index.js --presets es2015",
