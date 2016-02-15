@@ -14,12 +14,15 @@ function dataset(hash) {
   var _ref$data = _ref.data;
   var data = _ref$data === undefined ? {} : _ref$data;
   var _ref$prefix = _ref.prefix;
-  var prefix = _ref$prefix === undefined ? null : _ref$prefix;
+  var prefix = _ref$prefix === undefined ? '' : _ref$prefix;
   var _ref$allowFalse = _ref.allowFalse;
   var allowFalse = _ref$allowFalse === undefined ? true : _ref$allowFalse;
 
   var notNull = function notNull(v) {
     return v != null;
+  };
+  var notEmpty = function notEmpty(v) {
+    return notNull(v) && v.length > 0;
   };
 
   for (var key in hash) {
@@ -31,7 +34,7 @@ function dataset(hash) {
         case 'string':
         case 'number':
         case 'boolean':
-          var attr = ['data', prefix, key].filter(notNull).join('-');
+          var attr = ['data', prefix, key].filter(notEmpty).join('-');
           data[attr] = val.toString();
 
           break;
