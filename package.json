@@ -1,0 +1,30 @@
+{
+  "name": "to-dataset",
+  "version": "0.1.0",
+  "description": "object to DOM dataset",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel index.js -o dist/index.js --presets es2015",
+    "test": "browserify -t [ babelify --presets [ es2015 ] ] test.js | testling"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ehtb/to-dataset.git"
+  },
+  "keywords": [
+    "dataset"
+  ],
+  "author": "Edo Balvers <github@edo.me>",
+  "contributors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^3.0.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "13.0.0",
+    "eslint": "^0.20.0",
+    "tape": "^4.0.0"
+  },
+  "dependencies": {
+  }
+}
