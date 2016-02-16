@@ -5,22 +5,22 @@ Object to DOM Dataset
 ## API
 
 ```js
-  toDataset(hash, {data = {}, prefix = null, allowFalse = true} = {});
+  toDataset(hash, {data = {}, allowFalse = true} = {});
 ```
 
 ### hash
 The object to convert to a dataset, every key will get the ```data``` prefix.
-Hash values can be of type String, Number, Boolean, Function and Object.
-Strings, Numbers and Booleans will be parsed as string values.
-Functions will be called and recursively added to the dataset.
-Objects will be recursively added to the dataset.
+
+- Hash values can be of type String, Number, Boolean, Function and Object.
+- Strings, Numbers and Booleans will be parsed as string values.
+- Functions will be called and recursively added to the dataset.
+- Objects will be recursively added to the dataset.
 
 ### data (optional)
-The data object where the dataset will be merged into.
-Also used for recursive method calls.
+The data object where the dataset will be merged into, defaults to {}.
 
 ### allowFalse (optional)
-Set falsy dataset attributes
+Set falsy dataset attributes, default to true.
 
 
 ## Example
