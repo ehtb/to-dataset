@@ -4,13 +4,11 @@ function dataset(hash, {data = {}, prefix = '', allowFalse = true} = {}) {
   const notNull = v => v != null;
   const notEmpty = v => notNull(v) && v.length > 0;
 
-  for (var key in hash) {
+  for (let key in hash) {
     if (allowFalse && notNull(hash[key]) || hash[key]) {
-      const
-        val = hash[key],
-        argType = typeof val;
+      const val = hash[key];
 
-      switch (argType) {
+      switch (typeof val) {
       case 'string':
       case 'number':
       case 'boolean':
