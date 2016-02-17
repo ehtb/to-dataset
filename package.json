@@ -1,6 +1,6 @@
 {
   "name": "to-dataset",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JS object to DOM dataset",
   "main": "dist/index.js",
   "scripts": {

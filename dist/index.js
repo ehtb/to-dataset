@@ -27,10 +27,9 @@ function dataset(hash) {
 
   for (var key in hash) {
     if (allowFalse && notNull(hash[key]) || hash[key]) {
-      var val = hash[key],
-          argType = typeof val === 'undefined' ? 'undefined' : _typeof(val);
+      var val = hash[key];
 
-      switch (argType) {
+      switch (typeof val === 'undefined' ? 'undefined' : _typeof(val)) {
         case 'string':
         case 'number':
         case 'boolean':
