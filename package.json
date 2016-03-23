@@ -4,7 +4,7 @@
   "description": "JS object to DOM dataset",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel index.js -o dist/index.js --presets es2015",
+    "build": "babel index.js -o dist/index.js",
     "test": "babel-tape-runner test.js"
   },
   "repository": {
