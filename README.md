@@ -17,10 +17,10 @@ The object to convert to a dataset, every key will get the ```data``` prefix.
 - Objects will be recursively added to the dataset.
 
 ### data (optional)
-The data object where the dataset will be merged into, defaults to {}.
+The data object where the dataset will be merged into. Defaults to {}.
 
 ### allowFalse (optional)
-Set falsy dataset attributes, default to true.
+Set falsy dataset attributes, otherwise ignore. Defaults to true.
 
 
 ## Example
@@ -43,12 +43,14 @@ const data = toDataset({
   no: false
 });
 
-t.equal(data['data-component'], 'link');
-t.equal(data['data-is-false'], 'false');
-t.equal(data['data-is-deep-deep'], '1');
-t.equal(data['data-is-method'], 'hello');
-t.equal(data['data-is-method-deep-a'], '1');
-t.equal(data['data-is-method-deep-b'], '2');
-t.equal(data['data-no'], 'false');
+data === {
+  'data-component': 'link',
+  'data-is-false': 'false',
+  'data-is-deep-deep': '1',
+  'data-is-method': 'hello',
+  'data-is-method-deep-a': '1',
+  'data-is-method-deep-b': '2',
+  'data-no': 'false'
+};
 
 ```
